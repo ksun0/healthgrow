@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".MoodLogActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="2dp"
+                android:text="Mood Tracker"
+                android:textSize="15sp" />
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Record your mood on a scale from 1 (worst) to 5 (best):"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton android:id="@+id/mood1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:onClick="onRadioButtonClicked"/>
+                <RadioButton android:id="@+id/mood2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:onClick="onRadioButtonClicked"/>
+                <RadioButton android:id="@+id/mood3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:onClick="onRadioButtonClicked"/>
+                <RadioButton android:id="@+id/mood4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:onClick="onRadioButtonClicked"/>
+                <RadioButton android:id="@+id/mood5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:onClick="onRadioButtonClicked"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select any tags:"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/tag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="happy"
+                    android:onClick="onTagButtonClicked"/>
+                <Button
+                    android:id="@+id/tag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="calm"
+                    android:onClick="onTagButtonClicked"/>
+                <Button
+                    android:id="@+id/tag3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="anxious"
+                    android:onClick="onTagButtonClicked"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/tag4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="angry"
+                    android:onClick="onTagButtonClicked"/>
+                <Button
+                    android:id="@+id/tag5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="high-energy"
+                    android:onClick="onTagButtonClicked"/>
+                <Button
+                    android:id="@+id/tag6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="low-energy"
+                    android:onClick="onTagButtonClicked"/>
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/note"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="15dp"
+                android:hint="additional thoughts?"
+                android:inputType="textCapSentences|textAutoCorrect"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/moodsave"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:text="SAVE"
+                android:onClick="onMoodSave"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
